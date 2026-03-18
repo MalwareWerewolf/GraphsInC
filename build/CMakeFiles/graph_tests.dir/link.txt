@@ -1,1 +1,0 @@
-/usr/bin/cc -g -Wl,--dependency-file=CMakeFiles/graph_tests.dir/link.d CMakeFiles/graph_tests.dir/tests/unity.c.o CMakeFiles/graph_tests.dir/tests/test_graph.c.o -o graph_tests  libgraph_lib.a

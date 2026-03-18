@@ -1,1 +1,0 @@
-/usr/bin/cc -g -Wl,--dependency-file=CMakeFiles/my_graph_program.dir/link.d CMakeFiles/my_graph_program.dir/src/main.c.o -o my_graph_program  libgraph_lib.a

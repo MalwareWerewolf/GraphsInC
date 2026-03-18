@@ -1,0 +1,63 @@
+# =========================
+# C Compiled Object files
+# =========================
+*.o
+*.obj
+
+# =========================
+# Compiled libraries
+# =========================
+*.so
+*.dylib
+*.dll
+*.la
+*.a
+*.lib
+
+# =========================
+# Executables
+# =========================
+*.exe
+*.out
+*.app
+
+# Specifically ignore your project's compiled executables
+my_graph_program
+graph_tests
+test_graph
+
+# =========================
+# CMake & Build Directories
+# =========================
+build/
+build-*/
+out/
+bin/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+
+# =========================
+# IDEs and Editors
+# =========================
+.vscode/
+.idea/
+.cache/
+*.swp
+*.swo
+*~
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+

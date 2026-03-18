@@ -1,6 +1,0 @@
-/home/david/Dev/GraphsInC/build/CMakeFiles/graph_lib.dir
-/home/david/Dev/GraphsInC/build/CMakeFiles/my_graph_program.dir
-/home/david/Dev/GraphsInC/build/CMakeFiles/graph_tests.dir
-/home/david/Dev/GraphsInC/build/CMakeFiles/test.dir
-/home/david/Dev/GraphsInC/build/CMakeFiles/edit_cache.dir
-/home/david/Dev/GraphsInC/build/CMakeFiles/rebuild_cache.dir
