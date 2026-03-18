@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/david/Dev/GraphsInC/build",
+  "command": "/usr/bin/cc  -I/home/david/Dev/GraphsInC/include -g -o CMakeFiles/graph_lib.dir/src/graph.c.o -c /home/david/Dev/GraphsInC/src/graph.c",
+  "file": "/home/david/Dev/GraphsInC/src/graph.c",
+  "output": "CMakeFiles/graph_lib.dir/src/graph.c.o"
+},
+{
+  "directory": "/home/david/Dev/GraphsInC/build",
+  "command": "/usr/bin/cc  -I/home/david/Dev/GraphsInC/include -g -o CMakeFiles/my_graph_program.dir/src/main.c.o -c /home/david/Dev/GraphsInC/src/main.c",
+  "file": "/home/david/Dev/GraphsInC/src/main.c",
+  "output": "CMakeFiles/my_graph_program.dir/src/main.c.o"
+},
+{
+  "directory": "/home/david/Dev/GraphsInC/build",
+  "command": "/usr/bin/cc  -I/home/david/Dev/GraphsInC/tests -I/home/david/Dev/GraphsInC/include -g -o CMakeFiles/graph_tests.dir/tests/unity.c.o -c /home/david/Dev/GraphsInC/tests/unity.c",
+  "file": "/home/david/Dev/GraphsInC/tests/unity.c",
+  "output": "CMakeFiles/graph_tests.dir/tests/unity.c.o"
+},
+{
+  "directory": "/home/david/Dev/GraphsInC/build",
+  "command": "/usr/bin/cc  -I/home/david/Dev/GraphsInC/tests -I/home/david/Dev/GraphsInC/include -g -o CMakeFiles/graph_tests.dir/tests/test_graph.c.o -c /home/david/Dev/GraphsInC/tests/test_graph.c",
+  "file": "/home/david/Dev/GraphsInC/tests/test_graph.c",
+  "output": "CMakeFiles/graph_tests.dir/tests/test_graph.c.o"
+}
+]

@@ -1,0 +1,24 @@
+Start testing: Mar 18 16:05 GMT
+----------------------------------------------------------
+1/1 Testing: GraphTests
+1/1 Test: GraphTests
+Command: "/home/david/Dev/GraphsInC/build/graph_tests"
+Directory: /home/david/Dev/GraphsInC/build
+"GraphTests" start time: Mar 18 16:05 GMT
+Output:
+----------------------------------------------------------
+/home/david/Dev/GraphsInC/tests/test_graph.c:30:test_create_graph_not_null:PASS
+/home/david/Dev/GraphsInC/tests/test_graph.c:31:test_clear_graph_makes_all_lists_empty:PASS
+
+-----------------------
+2 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"GraphTests" end time: Mar 18 16:05 GMT
+"GraphTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 18 16:05 GMT
