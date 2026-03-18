@@ -39,7 +39,7 @@ int graph_add_vertex(Graph *g) {
     g->capacity = new_capacity;
     
     for (int i = g->vertex_count; i < g->capacity; i++) {
-        g->adj_lists[i] = NULL;
+      g->adj_lists[i] = NULL;
     }
   }
   
@@ -70,28 +70,27 @@ int graph_remove_vertex(Graph *g, int v) {
     
     while (curr != NULL) {
       if (curr->destination == v) {
-          AdjNode *temp = curr;
-          if (prev != NULL) {
-              prev->next = curr->next;
-          } else {
-              g->adj_lists[i] = curr->next;
-          }
-          curr = curr->next;
-          free(temp);
-          g->num_edges--;
+        AdjNode *temp = curr;
+        if (prev != NULL) {
+            prev->next = curr->next;
+        } else {
+            g->adj_lists[i] = curr->next;
+        }
+        curr = curr->next;
+        free(temp);
+        g->num_edges--;
       } else {
-          if (curr->destination > v) {
-              curr->destination -= 1;
-          }
-          prev = curr;
-          curr = curr->next;
+        if (curr->destination > v) {
+          curr->destination -= 1;
+        }
+        prev = curr;
+        curr = curr->next;
       }
     }
   }
 
-  // 3. Shift adjacency lists down
   for (int i = v; i < g->vertex_count - 1; i++) {
-      g->adj_lists[i] = g->adj_lists[i + 1];
+    g->adj_lists[i] = g->adj_lists[i + 1];
   }
   
   g->adj_lists[g->vertex_count - 1] = NULL;
@@ -101,33 +100,62 @@ int graph_remove_vertex(Graph *g, int v) {
 }
 
 int graph_add_edge(Graph *g, int source, int dest) {
-    if (!g || source < 0 || dest < 0 || source >= g->vertex_count || dest >= g->vertex_count) {
-        return -1;
+  if (!g || source < 0 || dest < 0 || source >= g->vertex_count || dest >= g->vertex_count) {
+    return -1;
+  }
+
+  AdjNode *new_node = malloc(sizeof(AdjNode));
+  if (!new_node) return -1;
+
+  new_node->destination = dest;
+  new_node->next = g->adj_lists[source];
+  g->adj_lists[source] = new_node;
+  g->num_edges++;
+
+  return 0;
+}
+
+int graph_remove_edge(Graph *g, int source, int dest) {
+  if (!g || source < 0 || dest < 0 || source >= g->vertex_count || dest >= g->vertex_count) {
+    return -1;
+  }
+
+  AdjNode *curr = g->adj_lists[source];
+  AdjNode *prev = NULL;
+
+  while (curr != NULL) {
+    if (curr->destination == dest) {            
+      if (prev != NULL) {
+        prev->next = curr->next;
+      } 
+      else {
+        g->adj_lists[source] = curr->next;
+      }
+
+      free(curr);
+      g->num_edges--;
+      return 0;
     }
+    
+    prev = curr;
+    curr = curr->next;
+  }
 
-    AdjNode *new_node = malloc(sizeof(AdjNode));
-    if (!new_node) return -1;
-
-    new_node->destination = dest;
-    new_node->next = g->adj_lists[source];
-    g->adj_lists[source] = new_node;
-    g->num_edges++;
-
-    return 0;
+  return -1; 
 }
 
 
 void print_graph(Graph *g) {
-    if (!g) return;
-    for (int i = 0; i < g->vertex_count; i++) {
-        AdjNode *ptr = g->adj_lists[i];
-        printf("Vertex %d:", i);
-        while (ptr != NULL) {
-            printf(" -> %d", ptr->destination);
-            ptr = ptr->next;
-        }
-        printf("\n");
+  if (!g) return;
+  for (int i = 0; i < g->vertex_count; i++) {
+    AdjNode *ptr = g->adj_lists[i];
+    printf("Vertex %d:", i);
+    while (ptr != NULL) {
+      printf(" -> %d", ptr->destination);
+      ptr = ptr->next;
     }
+    printf("\n");
+  }
 }
 
 void free_graph(Graph *g) {
