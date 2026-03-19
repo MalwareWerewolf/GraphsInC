@@ -4,7 +4,7 @@ project(GraphsInC C)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Library with your graph logic
-add_library(graph_lib src/graph.c)
+add_library(graph_lib src/graph_core.c src/graph_search.c)
 target_include_directories(graph_lib PUBLIC include)
 
 # Main executable

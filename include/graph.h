@@ -3,8 +3,6 @@
 
 #include "graph_core.h"
 #include "graph_types.h"
-
-// #include "graph_mutate.h"
-// #include "graph_query.h"
+#include "graph_search.h"
 
 #endif
